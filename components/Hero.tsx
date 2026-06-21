@@ -82,6 +82,8 @@ export function Hero() {
             </a>
             <a
               href={profile.links.resume}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-border-strong px-6 py-3 font-medium text-text transition-colors hover:border-accent/50 hover:bg-accent-dim"
             >
               Download résumé
@@ -102,7 +104,11 @@ export function Hero() {
               <a
                 key={s.label}
                 href={s.href}
-                target={s.href.startsWith("http") ? "_blank" : undefined}
+                target={
+                  s.href.startsWith("http") || s.href.endsWith(".pdf")
+                    ? "_blank"
+                    : undefined
+                }
                 rel="noreferrer"
                 className="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
               >
