@@ -37,3 +37,4 @@ lib/data.ts         ← all your content
 Push to GitHub, then import the repo at [vercel.com](https://vercel.com) → it auto-detects Next.js. Point `meetvijay.com` at it in the Vercel domains tab.
 # my-portfolio
 # my-portfolio
+# my-portfolio
