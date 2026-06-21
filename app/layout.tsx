@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   },
   description:
     "Vijay Pandey is a full-stack software engineer with 3+ years of experience building scalable web products with React, Next.js, TypeScript, Node.js, NestJS and AWS.",
+  applicationName: "Vijay Pandey — Portfolio",
+  category: "technology",
+  alternates: { canonical: "/" },
   keywords: [
     "Vijay Pandey",
     "Full-Stack Engineer",
@@ -43,6 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE,
+    locale: "en_US",
     title: "Vijay Pandey — Full-Stack Engineer",
     description:
       "Full-stack engineer shipping scalable web products with React, Next.js, TypeScript & AWS.",

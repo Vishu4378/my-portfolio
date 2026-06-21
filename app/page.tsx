@@ -24,8 +24,21 @@ const jsonLd = {
     addressRegion: "Uttarakhand",
     addressCountry: "IN",
   },
+  image: `${profile.links.portfolio}/profile.jpg`,
+  worksFor: {
+    "@type": "Organization",
+    name: "Orufy Technologies",
+  },
   sameAs: [profile.links.linkedin, profile.links.github],
-  knowsAbout: ["React", "Next.js", "TypeScript", "Node.js", "NestJS", "AWS"],
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "NestJS",
+    "AWS",
+    "React Native",
+  ],
 };
 
 export default function Home() {
@@ -48,7 +61,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
