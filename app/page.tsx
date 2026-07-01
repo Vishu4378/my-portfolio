@@ -1,3 +1,4 @@
+import { Chat } from "@/components/Chat";
 import { CursorGlow } from "@/components/CursorGlow";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
@@ -62,6 +63,7 @@ export default function Home() {
         <Contact />
       </main>
       {/* <Footer /> */}
+      <Chat />
     </>
   );
 }
