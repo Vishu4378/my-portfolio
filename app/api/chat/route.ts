@@ -58,6 +58,13 @@ export async function POST(req: Request) {
     });
   } catch (err) {
     console.error("Gemini request failed:", err);
+    const status = (err as { status?: number })?.status;
+    if (status === 429) {
+      return Response.json(
+        { error: "The AI service is rate-limited right now — please try again in a minute." },
+        { status: 429 }
+      );
+    }
     return Response.json(
       { error: "Failed to reach the AI service." },
       { status: 502 }

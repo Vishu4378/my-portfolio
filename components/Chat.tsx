@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, X, ArrowUp, Sparkles } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { profile } from "@/lib/data";
 
 type Msg = { role: "user" | "model"; text: string };
@@ -161,20 +162,25 @@ export function Chat() {
                   }`}
                 >
                   <div
-                    className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2 text-sm leading-relaxed ${
+                    className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed ${
                       m.role === "user"
-                        ? "rounded-br-sm accent-fill font-medium"
-                        : "rounded-bl-sm border border-border bg-surface-2 text-text"
+                        ? "whitespace-pre-wrap rounded-br-sm accent-fill font-medium"
+                        : "rounded-bl-sm border border-border bg-surface-2 text-text [&_a]:text-accent [&_a]:underline [&_li]:my-0.5 [&_ol]:list-decimal [&_ol]:pl-4 [&_p+p]:mt-2 [&_ul]:list-disc [&_ul]:pl-4"
                     }`}
                   >
-                    {m.text ||
-                      (busy && i === messages.length - 1 ? (
-                        <span className="inline-flex gap-1">
-                          <Dot /> <Dot d={0.15} /> <Dot d={0.3} />
-                        </span>
+                    {m.text ? (
+                      m.role === "model" ? (
+                        <ReactMarkdown>{m.text}</ReactMarkdown>
                       ) : (
-                        ""
-                      ))}
+                        m.text
+                      )
+                    ) : busy && i === messages.length - 1 ? (
+                      <span className="inline-flex gap-1">
+                        <Dot /> <Dot d={0.15} /> <Dot d={0.3} />
+                      </span>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               ))}
