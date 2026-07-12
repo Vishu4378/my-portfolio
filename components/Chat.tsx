@@ -144,7 +144,7 @@ export function Chat() {
                 </p>
                 <p className="flex items-center gap-1.5 text-xs text-faint">
                   <span className="h-1.5 w-1.5 rounded-full bg-green-400 pulse-dot" />
-                  AI assistant · powered by Gemini
+                  AI assistant 
                 </p>
               </div>
             </div>
