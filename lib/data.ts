@@ -45,7 +45,7 @@ export const profile = {
     portfolio: "https://meetvijay.com",
     linkedin: "https://www.linkedin.com/in/vijay-pandey-linkdin",
     github: "https://github.com/Vishu4378", 
-    resume: "/vijay_resume_30-3.pdf", // TODO: drop the PDF in /public
+    resume: "/vijay-resume-6-26.pdf", // TODO: drop the PDF in /public
     whatsapp:
       "https://wa.me/917902171437?text=Hi%20Vijay%2C%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect.",
   },
